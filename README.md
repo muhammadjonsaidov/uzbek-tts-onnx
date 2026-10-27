@@ -22,22 +22,42 @@ The exported models, tokenizer, default voice data, Java engine, and native
 runtime libraries are bundled into **`uzbek-tts-0.1.0.jar`**. Model conversion and
 packaging are development steps; users work with the prebuilt JAR.
 
-## Distribution status
+## Download and restore the JAR
 
-A prebuilt JAR is available locally in `dist/`; a public download has not been
-published yet. Remaining work before public distribution:
+You need **Java 17 or newer**. The prebuilt JAR is distributed as two binary
+parts, about **1.48 GB each**:
 
-- Reduce the artifact to under 2 GiB for single-file GitHub Releases distribution,
-  and validate audio quality and CPU/GPU compatibility after optimization.
-- Publish the JAR with its SHA-256 checksum and add the download link here.
+- `uzbek-tts-0.1.0.jar.part1`
+- `uzbek-tts-0.1.0.jar.part2`
 
-## Use the prebuilt JAR
+Both parts are prepared locally in `dist/`. A public release has not been
+published yet. Once published, obtain both parts from this project's
+[GitHub Releases](https://github.com/muhammadjonsaidov/uzbek-tts-onnx/releases)
+and place them in the same directory. Generated binaries are excluded from the
+source repository; cloning the source alone does not include these files.
 
-Install **Java 17 or newer** and obtain the prebuilt
-`uzbek-tts-0.1.0.jar` distributed with this project. In the development checkout,
-the ready artifact is located in `dist/`. Generated JARs and model binaries are
-excluded from the source repository; cloning the source alone does not include
-the ready artifact.
+From the directory containing both parts, restore the original JAR.
+
+**macOS / Linux:**
+
+```bash
+cat uzbek-tts-0.1.0.jar.part1 uzbek-tts-0.1.0.jar.part2 > uzbek-tts-0.1.0.jar
+```
+
+**Windows PowerShell:**
+
+```powershell
+cmd /c "copy /b uzbek-tts-0.1.0.jar.part1+uzbek-tts-0.1.0.jar.part2 uzbek-tts-0.1.0.jar"
+```
+
+The order is **part1, then part2**. The parts cannot run individually; joining
+them restores the same original JAR without changing the models or audio
+quality. Keep about **6 GB of free space** for the parts and restored JAR, plus
+space for the model cache described below. `SHA256SUMS`, when supplied with the
+parts, contains the checksum of the restored JAR. After joining, only the JAR
+is needed to run the application.
+
+## Use the restored JAR
 
 Using the JAR does not require Python, PyTorch, Maven, Docker, Hugging Face
 downloads, or a separate `chatterbox-finetuning` checkout.
