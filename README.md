@@ -24,17 +24,18 @@ packaging are development steps; users work with the prebuilt JAR.
 
 ## Download and restore the JAR
 
-You need **Java 17 or newer**. The prebuilt JAR is distributed as two binary
-parts, about **1.48 GB each**:
+You need **Java 17 or newer**. Download both binary parts and the checksum file
+from [release v0.1.0](https://github.com/muhammadjonsaidov/uzbek-tts-onnx/releases/tag/v0.1.0)
+and place them in the same directory:
 
-- `uzbek-tts-0.1.0.jar.part1`
-- `uzbek-tts-0.1.0.jar.part2`
+| File | Size |
+|---|---|
+| [uzbek-tts-0.1.0.jar.part1](https://github.com/muhammadjonsaidov/uzbek-tts-onnx/releases/download/v0.1.0/uzbek-tts-0.1.0.jar.part1) | 1.48 GB |
+| [uzbek-tts-0.1.0.jar.part2](https://github.com/muhammadjonsaidov/uzbek-tts-onnx/releases/download/v0.1.0/uzbek-tts-0.1.0.jar.part2) | 1.48 GB |
+| [SHA256SUMS](https://github.com/muhammadjonsaidov/uzbek-tts-onnx/releases/download/v0.1.0/SHA256SUMS) | 86 bytes |
 
-Both parts are prepared locally in `dist/`. A public release has not been
-published yet. Once published, obtain both parts from this project's
-[GitHub Releases](https://github.com/muhammadjonsaidov/uzbek-tts-onnx/releases)
-and place them in the same directory. Generated binaries are excluded from the
-source repository; cloning the source alone does not include these files.
+Generated binaries are excluded from the source repository; cloning the source
+or downloading GitHub's source archives does not include these release files.
 
 From the directory containing both parts, restore the original JAR.
 
@@ -53,9 +54,10 @@ cmd /c "copy /b uzbek-tts-0.1.0.jar.part1+uzbek-tts-0.1.0.jar.part2 uzbek-tts-0.
 The order is **part1, then part2**. The parts cannot run individually; joining
 them restores the same original JAR without changing the models or audio
 quality. Keep about **6 GB of free space** for the parts and restored JAR, plus
-space for the model cache described below. `SHA256SUMS`, when supplied with the
-parts, contains the checksum of the restored JAR. After joining, only the JAR
-is needed to run the application.
+space for the model cache described below. `SHA256SUMS` contains the checksum
+of the restored JAR. To check it, use `shasum -a 256 -c SHA256SUMS` on macOS or
+`sha256sum -c SHA256SUMS` on Linux. After joining, only the JAR is needed to run
+the application.
 
 ## Use the restored JAR
 
