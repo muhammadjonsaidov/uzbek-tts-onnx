@@ -1,0 +1,62 @@
+{
+  "format_version": 1,
+  "model": "uzbek-chatterbox",
+  "sample_rate": 24000,
+  "voice": "default",
+  "voice_cloning": false,
+  "dtype": "float32",
+  "num_layers": 30,
+  "num_heads": 16,
+  "head_dim": 64,
+  "hidden_size": 1024,
+  "start_text_token": 255,
+  "stop_text_token": 0,
+  "start_speech_token": 6561,
+  "stop_speech_token": 6562,
+  "speech_vocab_size": 6561,
+  "max_new_tokens": 1000,
+  "cfm_steps": 10,
+  "harmonics": 9,
+  "samples_per_token": 960,
+  "graphs": {
+    "embeddings": "embeddings.onnx",
+    "language_model": "language_model.onnx",
+    "decoder": "decoder.onnx"
+  },
+  "tensors": {
+    "conditioning": {
+      "file": "conditioning.bin",
+      "dtype": "float32",
+      "shape": [
+        1,
+        33,
+        1024
+      ]
+    },
+    "prompt_tokens": {
+      "file": "prompt_tokens.bin",
+      "dtype": "int64",
+      "shape": [
+        1,
+        159
+      ]
+    },
+    "speaker_embeddings": {
+      "file": "speaker_embeddings.bin",
+      "dtype": "float32",
+      "shape": [
+        1,
+        192
+      ]
+    },
+    "speaker_features": {
+      "file": "speaker_features.bin",
+      "dtype": "float32",
+      "shape": [
+        1,
+        319,
+        80
+      ]
+    }
+  }
+}

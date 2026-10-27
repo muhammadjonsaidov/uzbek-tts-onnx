@@ -1,0 +1,50 @@
+{
+  "format_version": 1,
+  "files": [
+    {
+      "name": "conditioning.bin",
+      "size": 135168,
+      "sha256": "38f6283ef87f3b50389e19ebfc2aaa28c8071453d0fd8f8171d22e44197726be"
+    },
+    {
+      "name": "decoder.onnx",
+      "size": 564844749,
+      "sha256": "5bf9af629ef3c991f2e0b0c8e574e357b9d0b09e8f09a40b7d7dab4457ea24a6"
+    },
+    {
+      "name": "embeddings.onnx",
+      "size": 68811954,
+      "sha256": "5f43cce486362aa30904ad1d9789ea062f1258903b308c1ebd770819133a39a6"
+    },
+    {
+      "name": "language_model.onnx",
+      "size": 2047491554,
+      "sha256": "b714b3e5baf932edd02fe15bf6fc2a7ac85de2cbc38116c649128d61352bf010"
+    },
+    {
+      "name": "manifest.json",
+      "size": 1204,
+      "sha256": "9ed125787646eb00613fa317dc183f63acedb1553046a2f00258334b8a933f71"
+    },
+    {
+      "name": "prompt_tokens.bin",
+      "size": 1272,
+      "sha256": "fa965a9c0a0bdd3cec1b9c4d4d29b65e7fc4f6c82f5842aaa2cccac012f11542"
+    },
+    {
+      "name": "speaker_embeddings.bin",
+      "size": 768,
+      "sha256": "7051aac43860579d46c4f164d916cd002787903ac242ae2a7144298593555979"
+    },
+    {
+      "name": "speaker_features.bin",
+      "size": 102080,
+      "sha256": "f76541204d56904f8f2acdb352bda9584dedd2e18617580061c5db29f2b1866c"
+    },
+    {
+      "name": "tokenizer.json",
+      "size": 69989,
+      "sha256": "69632f47220a788a52ce2661d096453c5655e9bf25289d89a8d832c46ee07dbf"
+    }
+  ]
+}

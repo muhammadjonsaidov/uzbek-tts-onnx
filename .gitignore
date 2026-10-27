@@ -1,0 +1,69 @@
+# Local OS and editor files
+.DS_Store
+._*
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python environments and caches
+.venv*/
+venv/
+.cache/
+cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Java build outputs and packaged releases
+/build/
+/dist/
+**/target/
+*.class
+*.jar
+!**/.mvn/wrapper/maven-wrapper.jar
+
+# Model weights, generated tensors and export fixtures
+*.onnx
+*.onnx.*
+*.onnx_data
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+/models/*.bin
+/checkpoints/*
+!/checkpoints/MODEL_CARD.md
+/conversion/*_fixture.npz
+
+# Generated speech and local recordings
+/samples/
+/*.wav
+/*.mp3
+/*.flac
+
+# Logs, native crash dumps and generated validation/profiling reports
+*.log
+hs_err_pid*
+replay_pid*
+/docs/device-profile-*/
+/docs/device-*-result.json
+/docs/device-inventory.json
+/docs/validation-*.json

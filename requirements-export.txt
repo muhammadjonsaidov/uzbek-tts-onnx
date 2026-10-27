@@ -1,0 +1,12 @@
+torch==2.6.0
+torchaudio==2.6.0
+chatterbox-tts==0.1.2
+s3tokenizer==0.3.0
+librosa==0.11.0
+soundfile==0.13.1
+omegaconf>=2.3,<3
+onnx==1.23.2
+onnxruntime==1.31.1
+numpy>=1.26
+tokenizers==0.20.3
+setuptools>=65,<81
